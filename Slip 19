@@ -1,0 +1,53 @@
+//PHP
+Q1)
+//HTML FILE
+<html>
+<form action=slip19.php method=get>
+Enter a Sentence<input type=text name=t1><br>
+Enter a word<input type=text name=t2><br>
+Enter position<input type=text name=t3><br>
+Enter number of characters to remove<input type=text name=t4><br>
+<input type=submit value="Display Result">
+</form>
+</html>
+
+//PHP FILE
+<?php
+$st=$_GET['t1'];
+$wd=$_GET['t2'];
+$ps=$_GET['t3'];
+$nr=$_GET['t4'];
+$dup_st=$st;
+$str=substr_replace($st,"",$ps,$nr);
+echo "<br>$str<br>";
+$str=substr_replace($st,$wd,$ps,0);
+echo "<br>$str<br>";
+$str=substr_replace($st,$wd,$ps,strlen($wd));
+echo "<br>$str<br>";
+?>
+
+
+
+
+
+//DS
+Q2A,B,C)
+import pandas as p
+df=p.DataFrame(columns =['name','age','per'])
+df.loc[0]=['rajesh',20,95]
+df.loc[1]=['suresh',21,85]
+df.loc[2]=['avinash',20,90]
+df.loc[3]=['kunal',21,75]
+df.loc[4]=['sakshi',20,80]
+df.loc[6]=['xxx',np.nan,95]
+df.loc[7]=['suresh',21,85]
+df.loc[8]=['archana',22,91]
+df.loc[9]=['kunal',20,np.nan]
+print(df)
+print(df.shape)
+print(df.describe)
+print(df.info())
+print(df.dtypes)
+df["remark"]=None
+df
+
